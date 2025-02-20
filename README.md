@@ -32,7 +32,7 @@ Background information on why we chose this method, assumptions
 Code, graphs, explanations here
 ### Results
 ## Method 2: Feedforward Neural Network
-Background information on why we chose this method, assumptions
+Feedfoward neural networks are used in the medical field for cardiovacsular diseases, cancer detection, and image analysis. The primary goal for this project is to see what factors are most likely to cause a heart attack, or myocardial infraction. To start, any variables that were not of a binary form were removed for this part of the analysis. The activation functions used for the model were all sigmoid functions, so the data had to reflect a binary form.  , assumptions
 ### Code
 Code, graphs, explanations here
 ### Results

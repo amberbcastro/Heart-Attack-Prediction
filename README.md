@@ -4,9 +4,9 @@
 What are the leading risk factors of a heart attack based on the analyzed dataset?
 
 ## Heart Attacks: An Overview of the Causes and Consequences
-According to the Center for Disease Control and Prevention (CDC), heart disease is the leading cause of death for women and men in the United States. The conditions that fall under heart disease account for the causes of heart attacks -- primarily the clogging of arteries. Every 40 seconds, someone in the United States dies of a heart attack. 
+According to the Center for Disease Control and Prevention (CDC), heart disease is the leading cause of death for women and men in the United States. The conditions that fall under heart disease account for the causes of heart attacks -- primarily the clogging of arteries, which carry oxygen-rich blood from the heart to the rest of the body. The chances that someone will develop heart disease or have a heart attack are reliant on a number of factors such as physical inactivity, tobacco use and air pollution, among others. 
 ### Importance
-Because of its great contribution to mortality in the United States, the causes of heart disease -- and more specifically, heart attacks -- are worth studying. Discovering the underlying predictors that put people more at risk of developing heart disease or having a heart attack allows us to minimize their prevalence and thus eliminate their deadliness.
+Every 40 seconds, someone in the United States dies of a heart attack, which amounts to about 805,000 people a year. Because of its great contribution to mortality in the United States, the causes of heart disease -- and more specifically, heart attacks -- are worth studying. Discovering the underlying predictors that put people more at risk of developing heart disease or having a heart attack allows us to minimize their prevalence and thus eliminate their deadliness.
 
 ![Heart Arteries](https://www.cdc.gov/heart-disease/media/images/hd-facts-1.jpg)
 __Figure 1:__ "As plaque builds up in the arteries of a person with heart disease, the inside of the arteries begins to narrow, which lessens or blocks the flow of blood" (CDC). This restriction of blood flow to the heart is the primary cause of a heart attack. 

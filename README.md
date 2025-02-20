@@ -9,7 +9,7 @@ According to the Center for Disease Control and Prevention (CDC), heart disease 
 Because of its great contribution to mortality in the United States, the causes of heart disease -- and more specifically, heart attacks -- are worth studying. Discovering the underlying predictors that put people more at risk of developing heart disease or having a heart attack allows us to minimize their prevalence and thus eliminate their deadliness.
 
 ![Heart Arteries](https://www.cdc.gov/heart-disease/media/images/hd-facts-1.jpg)
-__Figure 1:__ "As plaque builds up in the arteries of a person with heart disease, the inside of the arteries begins to narrow, which lessens or blocks the flow of blood." This restriction of blood flow to the heart is the primary cause of a heart attack. 
+__Figure 1:__ "As plaque builds up in the arteries of a person with heart disease, the inside of the arteries begins to narrow, which lessens or blocks the flow of blood" (CDC). This restriction of blood flow to the heart is the primary cause of a heart attack. 
 
 *Source: [CDC](https://www.cdc.gov/heart-disease/data-research/facts-stats/index.html#:~:text=Heart%20disease%20is%20the%20leading,people%20died%20from%20heart%20disease.), [WHO](https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1)*
 ## Dataset: [Heart Attack Risk Prediction Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset)

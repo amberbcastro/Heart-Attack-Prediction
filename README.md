@@ -11,6 +11,12 @@ The analyzed dataset was chosen from kaggle.com due to its extensive list of pot
 For the purposes of this project, the following variables were analyzed:
 | Variable Name   | Description                              | Type     | Default Value |
 |-----------------|------------------------------------------|----------|---------------|
+| `Diabetes`| Whether the patient has diabetes | `number` | `1: Yes, 0: No` |
+| `Family.History`| Family history of heart-related problem | `number` | `1: Yes, 0: No` |
+| `Smoking`| Smoking status of the patient | `number` | `1: Yes, 0: No` |
+| `Obesity`| Obesity status of the patient | `number` | `1: Yes, 0: No` |
+| `Previous.Heart.Problems`| Previous heart problems of the patient | `number` | `1: Yes, 0: No` |
+| `Medication.Use`| Medication usage by the patient | `number` | `1: Yes, 0: No` |
 | `Heart Attack Risk`| Presence of heart attack risk | `number` | `1: Yes, 0: No` |
 
 ## Method 1: Logistic Regression

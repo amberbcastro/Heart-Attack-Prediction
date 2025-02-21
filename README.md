@@ -33,6 +33,7 @@ Code, graphs, explanations here
 ### Results
 ## Method 2: Feedforward Neural Network
 Feedforward neural networks are used in the medical field for cardiovascular diseases, cancer detection, and image analysis. The primary goal of this project is to determine what factors are most likely to cause a heart attack or myocardial infarction. To start, any variables not in binary form were removed for this part of the analysis. The activation functions are sigmoid functions, so the data had to be binary. For the analysis to work correctly, many variables were not considered. 
+
 ```
 #Load in dataset
 Prediction<-read.csv("/Users/colint./Desktop/Working Directory/Prediction.csv")
@@ -74,6 +75,12 @@ trainIndex<-createDataPartition(Prediction$Heart.Attack.Risk,p=0.8,list=F)
 train_data<-Prediction[trainIndex,]
 test_data<-Prediction[-trainIndex,]
 
+x_train<-as.matrix(train_data[, -which(names(train_data) == "Heart.Attack.Risk")])
+y_train<-as.matrix(train_data$Heart.Attack.Risk)
+
+x_test<-as.matrix(test_data[, -which(names(test_data) == "Heart.Attack.Risk")])
+y_test<-as.matrix(test_data$Heart.Attack.Risk)
+
 #Create and plot model
 library(neuralnet)
 model = neuralnet(
@@ -83,6 +90,14 @@ model = neuralnet(
   linear.output=F
 )
 plot(model,rep="best")
+
+#Check model accuracy
+pred <- model %>% predict(x_test)
+predicted_classes <- ifelse(pred > 0.50, 1, 0)
+predicted_classes<-as.factor(predicted_classes)
+confMatrix<-confusionMatrix(predicted_classes,y_test_factor,positive = "1")
+confMatrix
+
 
 
 ```

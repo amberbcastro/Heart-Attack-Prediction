@@ -52,17 +52,17 @@ The model also helped identify key risk factors by looking at the coefficients. 
 
 Positive risk factors:
 
-*Diet: Surprisingly, a healthy diet was the strongest predictor for heart attack risk in this model.
-*Diabetes: Having diabetes increased the risk, which is consistent with medical research.
-*Sex_Male: Being male also increased the risk, which aligns with known trends.
-*Alcohol Consumption: Alcohol use was positively linked to heart attack risk.
+* Diet: Surprisingly, a healthy diet was the strongest predictor for heart attack risk in this model.
+* Diabetes: Having diabetes increased the risk, which is consistent with medical research.
+* Sex_Male: Being male also increased the risk, which aligns with known trends.
+* Alcohol Consumption: Alcohol use was positively linked to heart attack risk.
 
 Negative risk factors:
 
-*Obesity: Surprisingly, obesity was linked to a lower risk of heart attack in this model.
-*Family History: A family history of heart disease was also linked to a lower risk, which contradicts expectations.
-*Previous Heart Problems: Having previous heart problems was associated with a lower risk of heart attack, which is unexpected.
-*Medication Use: Medication use was also negatively correlated with heart attack risk, which is unusual.
+* Obesity: Surprisingly, obesity was linked to a lower risk of heart attack in this model.
+* Family History: A family history of heart disease was also linked to a lower risk, which contradicts expectations.
+* Previous Heart Problems: Having previous heart problems was associated with a lower risk of heart attack, which is unexpected.
+* Medication Use: Medication use was also negatively correlated with heart attack risk, which is unusual.
 
 The model’s performance was also evaluated using precision, recall, and F1-score. The precision was 0.66 for both classes, meaning the model was correct 66% of the time when predicting a heart attack risk. The recall was 0.67 for both classes, meaning the model identified 67% of the actual cases. The F1-score was also 0.66, showing a balanced trade-off between false positives and false negatives.
 

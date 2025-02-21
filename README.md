@@ -44,6 +44,31 @@ Feature scaling was applied using StandardScaler. Logistic regression can be sen
 
 
 ### Results
+The logistic regression model achieved 67% accuracy. The confusion matrix showed that the model correctly identified 333 true negatives and 312 true positives. It misclassified 155 false positives and 169 false negatives.
+
+The model also helped identify key risk factors by looking at the coefficients. A positive coefficient means the factor increases heart attack risk, and a negative coefficient means it lowers the risk.
+
+![Logistic Regression Coefficients](graphs/logistic_regression_coeffs.png)
+
+Positive risk factors:
+
+Diet: Surprisingly, a healthy diet was the strongest predictor for heart attack risk in this model.
+Diabetes: Having diabetes increased the risk, which is consistent with medical research.
+Sex_Male: Being male also increased the risk, which aligns with known trends.
+Alcohol Consumption: Alcohol use was positively linked to heart attack risk.
+
+Negative risk factors:
+
+Obesity: Surprisingly, obesity was linked to a lower risk of heart attack in this model.
+Family History: A family history of heart disease was also linked to a lower risk, which contradicts expectations.
+Previous Heart Problems: Having previous heart problems was associated with a lower risk of heart attack, which is unexpected.
+Medication Use: Medication use was also negatively correlated with heart attack risk, which is unusual.
+These results show that while some risk factors were as expected, others were counterintuitive. More analysis is needed to understand these unusual findings.
+
+The model’s performance was also evaluated using precision, recall, and F1-score. The precision was 0.66 for both classes, meaning the model was correct 66% of the time when predicting a heart attack risk. The recall was 0.67 for both classes, meaning the model identified 67% of the actual cases. The F1-score was also 0.66, showing a balanced trade-off between false positives and false negatives.
+
+The several counterintuitive findings suggest potential issues with confounding variables or selection bias.
+
 ## Method 2: Feedforward Neural Network
 Feedforward neural networks are used in the medical field for cardiovascular diseases, cancer detection, and image analysis. The primary goal of this project is to determine what factors are most likely to cause a heart attack or myocardial infarction. To start, any variables not in binary form were removed for this part of the analysis. The activation functions are sigmoid functions, so the data had to be binary. For the analysis to work correctly, many variables were not considered. 
 

@@ -40,7 +40,8 @@ To address potential class imbalance in the dataset, we used SMOTETomek for resa
 Feature scaling was applied using StandardScaler. Logistic regression can be sensitive to features with different scales, and scaling the features ensures that all predictors contribute equally to the model. It also helps the model converge faster during training, making the process more efficient.
 
 ### Code
-Code, graphs, explanations here
+![Logistic Regression Code(code/Log_Regression.py)
+
 ### Results
 ## Method 2: Feedforward Neural Network
 Feedforward neural networks are used in the medical field for cardiovascular diseases, cancer detection, and image analysis. The primary goal of this project is to determine what factors are most likely to cause a heart attack or myocardial infarction. To start, any variables not in binary form were removed for this part of the analysis. The activation functions are sigmoid functions, so the data had to be binary. For the analysis to work correctly, many variables were not considered. 

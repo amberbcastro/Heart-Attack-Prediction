@@ -40,7 +40,8 @@ To address potential class imbalance in the dataset, we used SMOTETomek for resa
 Feature scaling was applied using StandardScaler. Logistic regression can be sensitive to features with different scales, and scaling the features ensures that all predictors contribute equally to the model. It also helps the model converge faster during training, making the process more efficient.
 
 ### Code
-![Logistic Regression Code(code/Log_Regression.py)
+[Logistic Regression Model Script](code/Log_Regression.py)
+
 
 ### Results
 ## Method 2: Feedforward Neural Network

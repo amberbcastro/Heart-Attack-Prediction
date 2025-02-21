@@ -26,8 +26,19 @@ For the purposes of this project, the following variables were analyzed:
 | `Medication.Use`| Medication usage by the patient | `number` | `1: Yes, 0: No` |
 | `Heart Attack Risk`| Presence of heart attack risk | `number` | `1: Yes, 0: No` |
 
-## Method 1: 
-Background information on why we chose this method, assumptions
+## Method 1: Logistic Regression
+Logistic regression is a good choice because our target variable, heart attack risk, is binary. It works well with categorical data and provides clear insights into how each factor affects heart attack risk. For example, if smoking has a high positive coefficient, it means smoking increases the risk.
+
+In our dataset, we had to one-hot encode variables like 'Sex', 'Diabetes', 'Alcohol Consumption', and 'Diet' to transform them into a numerical format suitable for logistic regression. This is necessary because logistic regression requires numeric inputs and one-hot encoding allows us to represent categorical variables without imposing any ordinal relationships between them.
+
+Additionally, we split the 'Blood Pressure' variable into two columns: 'Systolic BP' and 'Diastolic BP'. This is because 'Blood Pressure' was originally stored as a string (e.g., "120/80"), and logistic regression requires numerical inputs. By splitting it, we can represent each value as an integer, making it easier to include as a feature in the model.
+
+Logistic regression doesn’t need much computing power, which makes it practical for a dataset of 8,763 patients. To ensure the model's effectiveness, we removed certain columns, such as 'Patient ID', 'Country', 'Continent', and 'Hemisphere'. These columns don’t contribute to predicting heart attack risk and may introduce noise into the model. 'Patient ID' is a unique identifier and irrelevant to risk factors, while 'Country', 'Continent', and 'Hemisphere' may not have a direct relationship with heart attack risk in this case, or their effects may be captured by other variables.
+
+To address potential class imbalance in the dataset, we used SMOTETomek for resampling. This technique generates synthetic data for the minority class and removes overlapping instances, leading to a more balanced dataset. This helps improve the model’s predictive performance, particularly for the underrepresented class, and reduces bias that could result from imbalanced data.
+
+Feature scaling was applied using StandardScaler. Logistic regression can be sensitive to features with different scales, and scaling the features ensures that all predictors contribute equally to the model. It also helps the model converge faster during training, making the process more efficient.
+
 ### Code
 Code, graphs, explanations here
 ### Results
@@ -105,7 +116,7 @@ confMatrix
 Code, graphs, explanations here
 ### Results
 ## Cross Validation 
-### Method 1: 
+### Method 1: Logistic Regression
 ### Method 2: Feedforward Neural Network
 ### Results: Comparing Methods
 ## Conclusions

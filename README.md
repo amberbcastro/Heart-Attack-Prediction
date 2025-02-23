@@ -113,3 +113,8 @@ Although the logistic model did not have the best performance, it could be impro
 * Test different sets of features: We would experiment with different combinations of variables, like using just lifestyle factors (Diet, Alcohol Consumption) or combining health-related factors (Blood Pressure, Diabetes, etc.) to see which ones help the model predict heart attack risk better.
 * Look for interactions: Some features might work better together. For example, combining age with blood pressure or diet with exercise might give the model better insights.
 * Check for relationships: It was assumed that the independent variables are not highly correlated with each other, which may not be true. I would check how different variables are related to each other and the outcome. If two variables are very similar, we might keep one and remove the other to make the model simpler.
+
+## Credits
+* Amber Castro -
+* Colin Taylor -
+* Samantha Juteram - Logistic model (background, code, results, conclusions, suggestions), Cross Validation

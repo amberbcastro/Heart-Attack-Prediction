@@ -77,10 +77,15 @@ Feedforward neural networks are used in the medical field for cardiovascular dis
 
 The main reason for the exclusion stems from the computational power needed for nerual network models. The dataset consisted of 8,763 patients, which makes the neural network a good tool to use. This is because neural networks work best when there is large amounts of data. Unfortunately, large amounts of data and the overall complexity of the model means creating and running a neural network is computationally taxing. 
 
+Another aspect worth mentioning is that while nueral networks allow for complex data to be analyzed, the output is difficult to analyze. 
+
 ### Code
 [Feedfoward Network Model Script](code/FFN.Rmd)
 
- graphs, explanations here
+ graphs,
+ 
+ 
+ explanations here
 ### Results
 ## Cross Validation 
 ### Method 1: Logistic Regression

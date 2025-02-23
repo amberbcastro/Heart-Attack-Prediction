@@ -26,6 +26,33 @@ For the purposes of this project, the following variables were analyzed:
 | `Medication.Use`| Medication usage by the patient | `number` | `1: Yes, 0: No` |
 | `Heart Attack Risk`| Presence of heart attack risk | `number` | `1: Yes, 0: No` |
 
+## How to Run the Code
+
+### Logistic Regression Model with CV (Python)
+1. **Download the Dataset:**  
+   Download the dataset from [Kaggle](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset)
+
+2. **Update the File Path:**  
+   In the `Log_Regression.py` script, replace the file path in the following line with the location where you saved the dataset:
+   ```
+   df = pd.read_csv("C:\\Users\\SamJutes\\Downloads\\heart_attack_prediction_dataset.csv")
+   
+3. **Run the Script:**
+  Execute the Log_Regression.py file in your Python environment.
+
+### Feedforward Neural Network Model (R)
+1. **Download the Dataset:**  
+   Download the dataset from [Kaggle](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset)
+
+2. **Update the File Path:**  
+   In the `FFN.Rmd` script, replace the file path in the following line with the location where you saved the dataset:
+   ```
+   Prediction <- read.csv("/Users/colint./Desktop/Working Directory/Prediction.csv")
+
+4. **Run the Script:**
+  Open the FFN.Rmd file in RStudio or your preferred R environment and run the code.
+
+
 ## Method 1: Logistic Regression
 Logistic regression is a good choice because our target variable, heart attack risk, is binary. It also provides clear insights into how each factor affects heart attack risk. For example, if smoking has a high positive coefficient, it means smoking increases the risk. As it is highly interpretable in that sense. 
 
@@ -64,8 +91,8 @@ Positive risk factors:
 
 Negative risk factors:
 
-* Obesity:  llinked to a lower risk of heart attack in this model.
-* Family History: Llinked to a lower risk
+* Obesity:  linked to a lower risk of heart attack in this model.
+* Family History: linked to a lower risk
 * Previous Heart Problems: Having previous heart problems was associated with a lower risk of heart attack
 * Medication Use: Medication use was also negatively correlated with heart attack risk.
 

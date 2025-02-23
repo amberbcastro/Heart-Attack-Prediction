@@ -82,10 +82,9 @@ Another aspect worth mentioning is that while nueral networks allow for complex 
 ### Code
 [Feedfoward Network Model Script](code/FFN.Rmd)
 
- graphs,
+### Results
+
  
- 
- explanations here
 ### Results
 ## Cross Validation 
 ### Method 1: Logistic Regression

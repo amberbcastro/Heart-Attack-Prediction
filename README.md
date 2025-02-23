@@ -27,7 +27,7 @@ For the purposes of this project, the following variables were analyzed:
 | `Heart Attack Risk`| Presence of heart attack risk | `number` | `1: Yes, 0: No` |
 
 ## Method 1: Logistic Regression
-Logistic regression is a good choice because our target variable, heart attack risk, is binary. It also provides clear insights into how each factor affects heart attack risk. For example, if smoking has a high positive coefficient, it means smoking increases the risk. S it is highly interpretable in that sense 
+Logistic regression is a good choice because our target variable, heart attack risk, is binary. It also provides clear insights into how each factor affects heart attack risk. For example, if smoking has a high positive coefficient, it means smoking increases the risk. As it is highly interpretable in that sense. 
 
 In our dataset, we had to one-hot encode variables like 'Sex', 'Diabetes', 'Alcohol Consumption', and 'Diet' to transform them into a numerical format suitable for logistic regression. Logistic regression requires numeric inputs so one-hot encoding allows us to represent categorical variables without imposing any ordinal relationships between them.
 
@@ -73,8 +73,9 @@ The model’s performance was also evaluated using precision, recall, and F1-sco
 
 
 ## Method 2: Feedforward Neural Network
-Feedforward neural networks are used in the medical field for cardiovascular diseases, cancer detection, and image analysis. The primary goal of this project is to determine what factors are most likely to cause a heart attack or myocardial infarction. To start, any variables not in binary form were removed for this part of the analysis. The activation functions are sigmoid functions, so the data had to be binary. For the analysis to work correctly, many variables were not considered. 
+Feedforward neural networks are used in the medical field for cardiovascular diseases, cancer detection, and image analysis. The primary goal of this project is to determine what factors are most likely to cause a heart attack or myocardial infarction. There were many variables presented in the dataset, but many were not in a binary form. Any variables not in binary form were removed for this part of the analysis. The variables that were considered are 'Diabetes', 'Family history', 'Smoking', 'Obesity', 'Previous Heart Problems', and 'Medication use'. 
 
+The main reason for the exclusion stems from the computational power needed for nerual network models. The dataset consisted of 8,763 patients, which makes the neural network a good tool to use. This is because neural networks work best when there is large amounts of data. Unfortunately, large amounts of data and the overall complexity of the model means creating and running a neural network is computationally taxing. 
 
 ### Code
 [Feedfoward Network Model Script](code/FFN.Rmd)
@@ -91,8 +92,6 @@ We chose cross validation for a couple reasons:
 * Computational expense:  Less computationally expensive than methods like LOOCV
 * Generalization: It helps ensure the model performs well on different data, not just a single subset. This is especially important in medical data where accuracy is critical.
   
-### Method 2: Feedforward Neural Network
-### Results: Comparing Methods
 ## Conclusions
 The logistic regression model achieved a 67% accuracy in predicting heart attack risk. While the model identified several key risk factors, some of the results were counterintuitive. Obesity and a family history of heart disease were unexpectedly linked to a lower risk of heart attack, which suggests that other factors may be influencing these relationships.
 

@@ -86,6 +86,10 @@ Another aspect worth mentioning is that while nueral networks allow for complex 
 
 ![Screenshot 2025-02-22 at 11 21 06 PM (3)](https://github.com/user-attachments/assets/0cf64e40-3199-4efc-8d1c-42d5d66b8617)
 
+The above image shows the produced neural network from the code. The input variables, hidden layer, and output layer are all shown. 
+
+A confusion matrix was used to evaluate model accuracy. From it, the model had a 36% accuracy, a precision rate of 36%, and an F1 score of 53%. The model was able to correctly predict an outcome 36% of the time, corectly identify the positive class 36% of the time, but has a high F1 score of 53%. The F1 score takes into account the model's recall and precision, meaning the model's recall increased the F1 score, as the precision rate was low. The results are contradictory, and should be further looked into.  
+
 ### Results
 ## Cross Validation 
 ### Method 1: Logistic Regression
@@ -101,6 +105,8 @@ We chose cross validation for a couple reasons:
 The logistic regression model achieved a 67% accuracy in predicting heart attack risk. While the model identified several key risk factors, some of the results were counterintuitive. Obesity and a family history of heart disease were unexpectedly linked to a lower risk of heart attack, which suggests that other factors may be influencing these relationships.
 
 However, the model's balanced performance in terms of precision, recall, and F1-score suggests that it is reasonably effective for the task. Further analysis is needed to understand the counterintuitive results.
+
+The feedfoward neural network model achieved a 36% accuracy in predicting heart attack risk. The model is shown to have contradictory results. This is seen with the accuracy score aand F1 score. Despite the low accruacy, the model could be fine tuned to produce more desirable results. 
 
 ## Suggestions for Future Analysis
 Although the logistic model did not have the best performance, it could be improved by making some adjustments. Given more time, we would try different combinations of variables. For example: 

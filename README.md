@@ -84,7 +84,8 @@ Another aspect worth mentioning is that while nueral networks allow for complex 
 
 ### Results
 
- 
+![Screenshot 2025-02-22 at 11 21 06 PM (3)](https://github.com/user-attachments/assets/0cf64e40-3199-4efc-8d1c-42d5d66b8617)
+
 ### Results
 ## Cross Validation 
 ### Method 1: Logistic Regression

@@ -77,7 +77,8 @@ Feedforward neural networks are used in the medical field for cardiovascular dis
 
 
 ### Code
-[Feedfoward Network Model Script](FFN..Rmd)
+[Feedfoward Network Model Script](FFN.Rmd)
+
  graphs, explanations here
 ### Results
 ## Cross Validation 

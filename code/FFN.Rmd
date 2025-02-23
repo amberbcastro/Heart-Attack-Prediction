@@ -1,0 +1,87 @@
+---
+title: "Code for Math Modeling Project 1"
+author: "Colin Taylor U83393638"
+date: "2025-02-17"
+output: html_document
+---
+
+```{r}
+#Read in data
+Prediction<-read.csv("/Users/colint./Desktop/Working Directory/Prediction.csv")
+Prediction
+```
+
+
+```{r}
+#Remove Columns
+Prediction$Patient.ID<-NULL
+Prediction$Age<-NULL
+Prediction$Sex<-NULL
+Prediction$Cholesterol<-NULL
+Prediction$Blood.Pressure<-NULL
+Prediction$Heart.Rate<-NULL
+Prediction$Exercise.Hours.Per.Week<-NULL
+Prediction$Diet<-NULL
+Prediction$Stress.Level<-NULL
+Prediction$Sedentary.Hours.Per.Day<-NULL
+Prediction$Income<-NULL
+Prediction$BMI<-NULL
+Prediction$Triglycerides<-NULL
+Prediction$Physical.Activity.Days.Per.Week<-NULL
+Prediction$Sleep.Hours.Per.Day<-NULL
+Prediction$Country<-NULL
+Prediction$Continent<-NULL
+Prediction$Hemisphere<-NULL
+Prediction$Alcohol.Consumption<-NULL
+```
+
+```{r}
+#Install Packages
+install.packages("keras")
+install.packages("tensorflow")
+
+#Load packages
+library(keras)
+library(tensorflow)
+library(dplyr)
+library(caret)
+```
+
+```{r}
+#Split dataset into train and test
+trainIndex<-createDataPartition(Prediction$Heart.Attack.Risk,p=0.8,list=F)
+
+train_data<-Prediction[trainIndex,]
+test_data<-Prediction[-trainIndex,]
+
+x_train<-as.matrix(train_data[, -which(names(train_data) == "Heart.Attack.Risk")])
+y_train<-as.matrix(train_data$Heart.Attack.Risk)
+
+x_test<-as.matrix(test_data[, -which(names(test_data) == "Heart.Attack.Risk")])
+y_test<-as.matrix(test_data$Heart.Attack.Risk)
+```
+
+```{r}
+library(neuralnet)
+model = neuralnet(
+  Heart.Attack.Risk~.,
+  data=train_data,
+  hidden=c(2),
+  linear.output=F
+)
+plot(model,rep="best")
+```
+
+
+```{r}
+#Check model accuracy
+x_train_factor<-as.factor(x_train)
+pred <- model %>% predict(x_train)
+predicted_classes <- ifelse(pred > 0.50, 1, 0)
+predicted_classes<-as.factor(predicted_classes)
+confMatrix<-confusionMatrix(predicted_classes,y_test_factor,positive = "1")
+confMatrix
+```
+
+
+

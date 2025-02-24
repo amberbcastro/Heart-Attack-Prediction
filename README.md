@@ -18,12 +18,27 @@ The analyzed dataset was chosen from kaggle.com due to its extensive list of pot
 For the purposes of this project, the following variables were analyzed:
 | Variable Name   | Description                              | Type     | Default Value |
 |-----------------|------------------------------------------|----------|---------------|
+| `Age`| Age of the patient | `number` | `43` |
+| `Sex`| Sex of the patient | `string` | `Female, Male` |
+| `Cholesterol`| Cholesterol levels of the patient | `number` | `238` |
+| `Blood Pressure`| Blood pressure of the patient | `number` | `systolic/diastolic` |
+| `Heart rate`| Heart rate of the patient | `number` | `73` |
 | `Diabetes`| Whether the patient has diabetes | `number` | `1: Yes, 0: No` |
 | `Family.History`| Family history of heart-related problem | `number` | `1: Yes, 0: No` |
 | `Smoking`| Smoking status of the patient | `number` | `1: Yes, 0: No` |
 | `Obesity`| Obesity status of the patient | `number` | `1: Yes, 0: No` |
-| `Previous.Heart.Problems`| Previous heart problems of the patient | `number` | `1: Yes, 0: No` |
-| `Medication.Use`| Medication usage by the patient | `number` | `1: Yes, 0: No` |
+| `Alcohol Consumption`| Level of alcohol consumption by the patient | `string` | `None, Light, Moderate, Heavy` |
+| `Excerise Hours Per Week`| Number of exercise hours per week | `number` | `8` |
+| `Diet`| Dietary habits of the patient | `string` | `Unhealthy, Average, Healthy` |
+| `Previous Heart Problems`| Previous heart problems of the patient | `number` | `1: Yes, 0: No` |
+| `Medication Use`| Medication usage by the patient | `number` | `1: Yes, 0: No` |
+| `Stress Level`| Stress level as reported by patient | `number` | `1-10` |
+| `Sedentary Hours Per Day`| Hours of sedentary activity per day | `number` | `6` |
+| `Income`| Income level of the patient | `number` | `235282` |
+| `BMI`| Body Mass Index (BMI) of the patient | `number` | `27.19` |
+| `Triglycerides`| Triglyceride levels of the patient | `number` | `338` |
+| `Physical Activity Days Per Week`| Days of physical activity per week | `number` | `3` |
+| `Sleep Hours Per Day`| Hours of sleep per day | `number` | `7` |
 | `Heart Attack Risk`| Presence of heart attack risk | `number` | `1: Yes, 0: No` |
 
 ## How to Run the Code
@@ -117,7 +132,6 @@ The above image shows the produced neural network from the code. The input varia
 
 A confusion matrix was used to evaluate model accuracy. From it, the model had a 36% accuracy, a precision rate of 36%, and an F1 score of 53%. The model was able to correctly predict an outcome 36% of the time, corectly identify the positive class 36% of the time, but has a high F1 score of 53%. The F1 score takes into account the model's recall and precision, meaning the model's recall increased the F1 score, as the precision rate was low. The results are contradictory, and should be further looked into.  
 
-### Results
 ## Cross Validation: Logistic Regression
 We used LogisticRegressionCV from scikit-learn which automatically performs cross-validation with the Logistic regression. It splits the dataset into subsets, trains the model on some, and tests it on others. It does this multiple times to find the best regularization value, C, which helps prevent overfitting. The best C value for this model was found to be 0.001. 
 
@@ -134,14 +148,15 @@ However, the model's balanced performance in terms of precision, recall, and F1-
 
 The feedfoward neural network model achieved a 36% accuracy in predicting heart attack risk. The model is shown to have contradictory results. This is seen with the accuracy score aand F1 score. Despite the low accruacy, the model could be fine tuned to produce more desirable results. 
 
-## Suggestions for Future Analysis
-# Logistic Regression:
+# Suggestions for Future Analysis
+As noted previously, the dataset used in this mathematical analysis was ChatGPT-generated, which enabled us to play around with the modeling methods instead of spending time cleaning up real data (which is often more messy). However, for a more real-world application, it is suggested that real data values are used to draw conclusions on. In addition, there may be better ways to scale certain variables in the analyzed dataset. For example, alcohol consumption is reported as "none," "light," "moderate" or "heavy" -- but these qualitative metrics may be more subjective to personal bias and therefore, not a uniform measurement. Also, due to restraints of time and computational power, the models ran included many variables at a time to test for the greatest predictor of a heart attack. Future analysis should perform these tests initially, and potentially narrow down the testing to the variables that seem to produce the most impact on heart attack risk.
+## Logistic Regression:
 Although the logistic model did not have the best performance, it could be improved by making some adjustments. Given more time, we would try different combinations of variables. For example: 
 * Test different sets of features: We would experiment with different combinations of variables, like using just lifestyle factors (Diet, Alcohol Consumption) or combining health-related factors (Blood Pressure, Diabetes, etc.) to see which ones help the model predict heart attack risk better.
 * Look for interactions: Some features might work better together. For example, combining age with blood pressure or diet with exercise might give the model better insights.
 * Check for relationships: It was assumed that the independent variables are not highly correlated with each other, which may not be true. I would check how different variables are related to each other and the outcome. If two variables are very similar, we might keep one and remove the other to make the model simpler.
 
-# Feedfoward Neural Network:
+## Feedfoward Neural Network:
 The feedfoward neural network created performed adequetly, but it could refined by making some changes. There are different suggestions that could be made for the future. Some include:
 * Use more of the variables in the dataset. The only variables used in the dataset for the neural network were variables of a binary form. For future analysis, using more variables can aid in the model's success. While neural networks can be computationally expensive with multiple variables, using more variables can allow for a more practically significant model. 
 * Use an automatic hyperparamter tuner. Hyperparameters are the variables set before the training process begins, and controls how the model learns. The hyperparameters control the paramters the model creates. Using a tuner requires computational power, as it runs a set amount of iterations. However, using a tuner allows for desirable results.

@@ -145,7 +145,8 @@ Although the logistic model did not have the best performance, it could be impro
 # Feedfoward Neural Network:
 The feedfoward neural network created performed adequetly, but it could refined by making some changes. There are different suggestions that could be made for the future. Some include:
 * Use more of the variables in the dataset. The only variables used in the dataset for the neural network were variables of a binary form. For future analysis, using more variables can aid in the model's success. While neural networks can be computationally expensive with multiple variables, using more variables can allow for a more practically significant model. 
-* Use an automatic hyperparamter tuner. Hyperparameters are the variables set before the training process begins, and controls how the model learns. The hyperparameters control the paramters the model creates. Using a tuner requires computational power, as it runs a set amount of iterations. However, using a tuner allows for desirable results. 
+* Use an automatic hyperparamter tuner. Hyperparameters are the variables set before the training process begins, and controls how the model learns. The hyperparameters control the paramters the model creates. Using a tuner requires computational power, as it runs a set amount of iterations. However, using a tuner allows for desirable results.
+* Use more than one hidden layer. Also, use more than two hidden neurons. Using multiple hidden layers along with multiple hidden neurons can allow for the model to learn from the training data better. 
 
 ## Credits
 * Amber Castro -

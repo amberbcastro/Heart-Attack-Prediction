@@ -142,6 +142,10 @@ Although the logistic model did not have the best performance, it could be impro
 * Look for interactions: Some features might work better together. For example, combining age with blood pressure or diet with exercise might give the model better insights.
 * Check for relationships: It was assumed that the independent variables are not highly correlated with each other, which may not be true. I would check how different variables are related to each other and the outcome. If two variables are very similar, we might keep one and remove the other to make the model simpler.
 
+# Feedfoward Neural Network:
+The feedfoward neural network created performed adequetly, but it could refined by making some changes. There are different suggestions that could be made for the future. Some include:
+*Use more of the variables in the dataset. The only variables used in the dataset for the neural network were variables of a binary form. For future analysis, using more variables can aid in the model's success. While neural networks can be computationally expensive with multiple variables, using more variables can allow for a more practically significant model. 
+*Use an automatic hyperparamter tuner. Hyperparameters are the variables set before the training process begins, and controls how the model learns. The hyperparameters control the paramters the model creates. Using a tuner requires computational power, as it runs a set amount of iterations. However, using a tuner allows for desirable results. 
 
 ## Credits
 * Amber Castro -

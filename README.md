@@ -163,6 +163,6 @@ The feedfoward neural network created performed adequetly, but it could refined 
 * Use more than one hidden layer. Also, use more than two hidden neurons. Using multiple hidden layers along with multiple hidden neurons can allow for the model to learn from the training data better. 
 
 ## Credits
-* Amber Castro - Background research, README file outline, model revisions, manage project instructions
+* Amber Castro - Background research and introduction, README file outline, model revisions, general future suggestions, manage project instructions
 * Colin Taylor - Feedfoward Neural Network (background, code, results, conclusions, suggestions)
 * Samantha Juteram - Logistic model (background, code, results, conclusions, suggestions), Cross Validation

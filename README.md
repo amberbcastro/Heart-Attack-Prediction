@@ -118,8 +118,7 @@ The above image shows the produced neural network from the code. The input varia
 A confusion matrix was used to evaluate model accuracy. From it, the model had a 36% accuracy, a precision rate of 36%, and an F1 score of 53%. The model was able to correctly predict an outcome 36% of the time, corectly identify the positive class 36% of the time, but has a high F1 score of 53%. The F1 score takes into account the model's recall and precision, meaning the model's recall increased the F1 score, as the precision rate was low. The results are contradictory, and should be further looked into.  
 
 ### Results
-## Cross Validation 
-### Method 1: Logistic Regression
+## Cross Validation: Logistic Regression
 We used LogisticRegressionCV from scikit-learn which automatically performs cross-validation with the Logistic regression. It splits the dataset into subsets, trains the model on some, and tests it on others. It does this multiple times to find the best regularization value, C, which helps prevent overfitting. The best C value for this model was found to be 0.001. 
 
 We chose cross validation for a couple reasons:
@@ -149,6 +148,6 @@ The feedfoward neural network created performed adequetly, but it could refined 
 * Use more than one hidden layer. Also, use more than two hidden neurons. Using multiple hidden layers along with multiple hidden neurons can allow for the model to learn from the training data better. 
 
 ## Credits
-* Amber Castro -
+* Amber Castro - Background research, README file outline, model revisions, manage project instructions
 * Colin Taylor - Feedfoward Neural Network (background, code, results, conclusions, suggestions)
 * Samantha Juteram - Logistic model (background, code, results, conclusions, suggestions), Cross Validation
